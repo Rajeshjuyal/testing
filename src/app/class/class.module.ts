@@ -7,4 +7,6 @@ import { ClassRoutingModule } from './class-routing.module';
   declarations: [ClassComponent],
   imports: [CommonModule, ClassRoutingModule],
 })
-export class ClassModule {}
+export class ClassModule {
+  hj;
+}
