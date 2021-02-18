@@ -8,7 +8,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./class.component.scss'],
 })
 export class ClassComponent implements OnInit {
-  constructor(private api: CrudService, private http: HttpClient) {}
+  public classlist: Array<any> = [];
+  constructor(private api: CrudService, private http: HttpClient) {
+    this.classlist;
+  }
 
   ngOnInit(): void {}
+
+  extractdata(res: Response) {
+    const body = res;
+    return body || {};
+  }
+  class(){
+    this.api.
+    getsclass()
+  }
 }
