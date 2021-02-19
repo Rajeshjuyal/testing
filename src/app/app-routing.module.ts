@@ -6,10 +6,25 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
+
   {
-    path: 'schools',
+    path: 'bets',
+    loadChildren: () => import('./bet/bet.module').then((m) => m.BetModule),
+  },
+  {
+    path: 'profile',
     loadChildren: () =>
-      import('./school/school.module').then((m) => m.SchoolModule),
+      import('./profile/profile.module').then((m) => m.ProfileModule),
+  },
+  {
+    path: 'sequence',
+    loadChildren: () =>
+      import('./sequence/sequence.module').then((m) => m.SequenceModule),
+  },
+  {
+    path: 'transfer',
+    loadChildren: () =>
+      import('./transfer/transfer.module').then((m) => m.TransferModule),
   },
 ];
 

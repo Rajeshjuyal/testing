@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { CrudService } from '../crud.service';
+import { CrudService } from './crud.service';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+// import {getsbets} from './crud.service'
+
 @Component({
-  selector: 'app-school',
-  templateUrl: './school.component.html',
-  styleUrls: ['./school.component.scss'],
+  selector: 'app-bet',
+  templateUrl: './bet.component.html',
+  styleUrls: ['./bet.component.scss'],
 })
-export class SchoolComponent implements OnInit {
-  public schoollist: Array<any> = [];
+export class BetComponent implements OnInit {
+  public betlist: Array<any> = [];
 
   constructor(private api: CrudService, private http: HttpClient) {
-    this.schools();
+    this.bets();
   }
 
   ngOnInit(): void {}
@@ -21,14 +22,13 @@ export class SchoolComponent implements OnInit {
     const body = res;
     return body || {};
   }
-
-  schools() {
+  bets() {
     this.api
-      .getschools()
+      .getsbets()
       .pipe(map(this.extractdata))
       .subscribe((result: any) => {
         console.log(result);
-        this.schoollist = result.response_data;
+        this.betlist = result.response_data;
       });
   }
 }
