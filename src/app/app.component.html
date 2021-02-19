@@ -1,19 +1,186 @@
-<ul>
-  <li>
-    <a href="/"><h1>Users</h1></a>
-  </li>
-  <li>
-    <a href="/bets"><h1>Bet</h1></a>
-  </li>
-  <li>
-    <a href="/profile"><h1>Profile</h1></a>
-  </li>
-  <!-- <li>
-    <a href="/sequence"><h1>Sequence</h1></a>
-  </li> -->
-</ul>
-<li>
-  <a href ="/transfer"><h1>transfer</h1></a>
-</li>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.agoogleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {
+        height: 550px;
+        background-color: currentColor;
+      }
 
-<router-outlet></router-outlet>
+      /* Set gray background color and 100% height */
+      .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+
+      /* On small screens, set height to 'auto' for the grid */
+      @media screen and (max-width: 767px) {
+        .row.content {
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse visible-xs">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">TSF Dashboard</a></li>
+            <li><a href="#">Bet</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Transfer</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-3 sidenav hidden-xs">
+          <h2>TSF</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#section1">Dashboard</a></li>
+            <li><a href="#section1">Users</a></li>
+            <li><a href="#section2">Bet</a></li>
+            <li><a href="#section3">Profile</a></li>
+            <li><a href="#section3">Transfer</a></li>
+          </ul>
+          <br />
+        </div>
+        <br />
+
+        <div class="col-sm-9">
+          <div class="well">
+            <h4>Dashboard</h4>
+            <p>
+              TSF Dashboard is a gaming Dashboard which contains the api of
+              Users,Bet,Profile,Transfer,its backend is connected with the
+              frontend
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="well">
+                <h4>Users</h4>
+                <p>1 Million</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well">
+                <h4>Bets</h4>
+                <p>100 Million</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well">
+                <h4>Profile</h4>
+                <p>10 Million</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well">
+                <h4>Transfer</h4>
+                <p>30%</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="well">
+                <p>1-user</p>
+                <p>2-user</p>
+                <p>3-user</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="well">
+                <p>1-betapply</p>
+                <p>2-betapply</p>
+                <p>3-betapply</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="well">
+                <p>1-profile</p>
+                <p>2-profile</p>
+                <p>3-profile</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="well">
+                <p>
+                  Text-How would you like to generate bets online or by cash
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="well">
+                <p>
+                  Text- How would you like to generate through user profile or
+                  local profile
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-9">
+              <div class="container">
+                <h2>TSF Form</h2>
+                <form>
+                  <div class="form-group">
+                    <label for="email">Users:</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="pwd"
+                      placeholder="Enter password"
+                    />
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" /> Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
