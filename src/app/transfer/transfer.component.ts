@@ -18,7 +18,7 @@ export class TransferComponent implements OnInit {
   ngOnInit(): void {}
   extractdata(res: Response) {
     const body = res;
-    return body || {};
+    return body || [{ name: 'No Tranfers' }];
   }
   transfer() {
     this.api

@@ -1,1 +1,6 @@
 <p>user works!</p>
+<ul>
+  <li *ngFor="let User of userlist">
+    {{ User.firstName }} {{ User.lastName }} -- {{ User.email }}
+  </li>
+</ul>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { UserComponent } from './user/user.component';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,5 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'testing';
   private router: Router;
+  private route: ActivatedRoute;
 }

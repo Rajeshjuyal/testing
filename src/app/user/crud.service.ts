@@ -6,8 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CrudService {
   constructor(private http: HttpClient) {}
-
-  getstransfer() {
-    return this.http.get('http://localhost:4000/transfer');
+  getUser() {
+    return this.http.get('http://localhost:4000/users/userlist');
   }
 }

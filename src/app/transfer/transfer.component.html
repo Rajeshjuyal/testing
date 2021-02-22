@@ -1,6 +1,7 @@
 <p>transfer works!</p>
 <ul>
-  <li *ngFor="list; transfer: of; transferlist">
-    {{ transfer.name }}
+  <li *ngFor="let transfer of Transferlist">
+    {{ transfer.name }} {{ transfer.balance }} {{ transfer.amount }}
+    {{ transfer.payd }}
   </li>
 </ul>
